@@ -20,7 +20,7 @@ pipeline {
  stage('Deploy to Tomcat') {
  steps {
  script {
-deploy adapters: [tomcat9(credentialsId: 'd97c36d2-d7a9-439f-a035-c88294125145', path: '', url: 'http://localhost:8080')], contextPath: '/ci-cd', war: '**/*.war'}
+deploy adapters: [tomcat9(path: '', url: 'http://localhost:8080')], contextPath: '/ci-cd-jk', war: '**/*.war'}
  }
  }
  }
